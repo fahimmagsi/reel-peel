@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Reel Peel</title>
+  <meta name="description" content="Official Privacy Policy for Reel Peel application. Details our data collection, TikTok API integration, GDPR/CCPA compliance, and user data deletion procedures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg-main: #0B0F19;
+  --bg-card: rgba(18, 24, 38, 0.75);
+  --bg-card-hover: rgba(28, 36, 56, 0.85);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-highlight: rgba(99, 102, 241, 0.3);
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --primary-accent: #6366F1;
+  --primary-gradient: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%);
+  --tiktok-cyan: #25F4EE;
+  --tiktok-pink: #FE2C55;
+  --badge-bg: rgba(99, 102, 241, 0.12);
+  --badge-border: rgba(99, 102, 241, 0.3);
+  --badge-text: #818CF8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(37, 244, 238, 0.06) 0%, transparent 50%);
+  min-height: 100vh;
+}
+
+a {
+  color: #818CF8;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #A5B4FC;
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(11, 15, 25, 0.85);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: #FFF !important;
+  font-weight: 600;
+  padding: 0.55rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none !important;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem 1.5rem;
+}
+
+/* Hero Section */
+.hero-header {
+  text-align: center;
+  padding: 3rem 1rem 2rem 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  color: var(--badge-text);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #FFFFFF 0%, #CBD5E1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.meta-info {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Layout with TOC */
+.doc-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .doc-layout {
+    grid-template-columns: 1fr;
+  }
+  .toc-sidebar {
+    display: none;
+  }
+}
+
+.toc-sidebar {
+  position: sticky;
+  top: 6rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(12px);
+}
+
+.toc-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toc-link {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  display: block;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.toc-link:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  text-decoration: none;
+}
+
+/* Content Area */
+.content-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.content-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.content-card h2:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.content-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-card p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-size: 0.975rem;
+}
+
+.content-card ul, .content-card ol {
+  color: var(--text-secondary);
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.975rem;
+}
+
+.content-card li {
+  margin-bottom: 0.4rem;
+}
+
+/* Alert Boxes */
+.alert-box {
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.alert-info {
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  color: #CBD5E1;
+}
+
+.alert-tiktok {
+  background: rgba(37, 244, 238, 0.06);
+  border: 1px solid rgba(37, 244, 238, 0.25);
+  color: #E2E8F0;
+}
+
+.alert-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.alert-body h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #FFF;
+}
+
+.alert-body p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  color: #CBD5E1;
+}
+
+/* Cards Grid for Landing Page */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 1.75rem;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-highlight);
+  background: var(--bg-card-hover);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.15);
+  color: #818CF8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 0.925rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border-color);
+  background: rgba(11, 15, 25, 0.95);
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--text-primary);
+}
+
+.footer-copy {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="./index.html" class="brand-logo">
+      <div class="brand-icon">🎬</div>
+      <span>Reel Peel</span>
+    </a>
+    <div class="nav-links">
+      <a href="./index.html" class="nav-link">Home</a>
+      <a href="./privacy.html" class="nav-link active">Privacy Policy</a>
+      <a href="./terms.html" class="nav-link">Terms of Service</a>
+      <a href="mailto:fahimmagsi@gmail.com" class="btn-primary">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="hero-header">
+      <div class="badge">Legal & Data Protection</div>
+      <h1 class="hero-title">Privacy Policy</h1>
+      <p class="hero-subtitle">How Reel Peel collects, uses, protects, and handles your information when using our social media management application and third-party integrations.</p>
+      
+      <div class="meta-info">
+        <span>📅 Effective Date: August 20, 2026</span>
+        <span>🕒 Last Updated: August 20, 2026</span>
+        <span>📬 Contact: fahimmagsi@gmail.com</span>
+      </div>
+    </header>
+
+    <div class="doc-layout">
+      <!-- Table of Contents -->
+      <aside class="toc-sidebar">
+        <div class="toc-title">Table of Contents</div>
+        <ul class="toc-list">
+          <li><a href="#introduction" class="toc-link">1. Introduction & Overview</a></li>
+          <li><a href="#data-collection" class="toc-link">2. Information We Collect</a></li>
+          <li><a href="#tiktok-data" class="toc-link">3. TikTok API Data & Usage</a></li>
+          <li><a href="#data-usage" class="toc-link">4. How We Use Information</a></li>
+          <li><a href="#data-sharing" class="toc-link">5. Data Sharing & Third Parties</a></li>
+          <li><a href="#retention-storage" class="toc-link">6. Storage, Security & Retention</a></li>
+          <li><a href="#user-rights" class="toc-link">7. User Rights (GDPR & CCPA)</a></li>
+          <li><a href="#data-deletion" class="toc-link">8. Data Deletion Instructions</a></li>
+          <li><a href="#children" class="toc-link">9. Children's Privacy</a></li>
+          <li><a href="#changes" class="toc-link">10. Changes to This Policy</a></li>
+          <li><a href="#contact" class="toc-link">11. Contact Information</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content-card">
+        
+        <section id="introduction">
+          <h2>1. Introduction & Overview</h2>
+          <p>Welcome to <strong>Reel Peel</strong> ("we," "our," "us," or "the Application"). Reel Peel is a social media management platform designed to help content creators, businesses, and individuals manage, organize, schedule, and publish video content across multiple social media platforms, including TikTok.</p>
+          <p>We respect your privacy and are committed to safeguarding personal data in compliance with international data privacy laws, including the European Union General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA/CPRA), and the <strong>TikTok Developer Platform Terms of Service and Partner Privacy Policy</strong>.</p>
+          <p>By downloading, accessing, or using Reel Peel (via Web, Desktop, Android, or iOS), you agree to the collection and handling of your data as outlined in this Privacy Policy.</p>
+        </section>
+
+        <section id="data-collection">
+          <h2>2. Information We Collect</h2>
+          <p>We only collect information necessary to provide, optimize, and secure Reel Peel's services:</p>
+          <ul>
+            <li><strong>Account Information:</strong> When you register or log in, we collect your email address, display name, profile avatar, and account preferences.</li>
+            <li><strong>User-Generated Content:</strong> Video files, captions, tags, scheduled publishing times, thumbnail images, and associated metadata that you upload or prepare for publishing.</li>
+            <li><strong>Device and Technical Information:</strong> IP address, operating system, browser type, app version, crash reports, and system telemetry to troubleshoot issues and ensure service stability.</li>
+            <li><strong>Third-Party Authentication Data:</strong> OAuth tokens, permission scopes, and user identifiers granted when you connect external accounts such as TikTok.</li>
+          </ul>
+        </section>
+
+        <section id="tiktok-data">
+          <h2>3. TikTok API Data & Compliance</h2>
+          <div class="alert-box alert-tiktok">
+            <div class="alert-icon">🎵</div>
+            <div class="alert-body">
+              <h4>Compliance with TikTok Developer Policies</h4>
+              <p>Reel Peel accesses TikTok user data exclusively through official TikTok for Developers APIs (such as Login Kit, Share Kit, and Content Posting API) based strictly on explicit permissions and scopes granted by the user.</p>
+            </div>
+          </div>
+          <p>When you connect your TikTok account to Reel Peel, we access and process only the permissions you explicitly authorize:</p>
+          <ul>
+            <li><strong>Basic Profile Information:</strong> TikTok Open ID, display name, and avatar image to display your connected account within the Reel Peel dashboard.</li>
+            <li><strong>Content Posting & Management:</strong> Uploading, scheduling, and publishing video files and caption metadata to your TikTok profile upon your direct command.</li>
+            <li><strong>Tokens:</strong> Temporary OAuth 2.0 access and refresh tokens used to authenticate requests securely without storing your TikTok password.</li>
+          </ul>
+          <p><strong>Important:</strong> We do <em>not</em> sell your TikTok data, transfer it to data brokers, or use it for automated facial recognition, biometric profiling, or targeted external advertising.</p>
+        </section>
+
+        <section id="data-usage">
+          <h2>4. How We Use Information</h2>
+          <p>We use the collected information for the following specific purposes:</p>
+          <ul>
+            <li>To operate, maintain, and provide core Reel Peel functionalities (video scheduling, multi-account publishing, workflow automation).</li>
+            <li>To authenticate your identity and maintain secure sessions.</li>
+            <li>To execute user-initiated publishing and upload actions to connected social media platforms.</li>
+            <li>To communicate crucial updates, security alerts, and customer support responses.</li>
+            <li>To detect, prevent, and address technical bugs, fraudulent activities, or violations of our Terms of Service.</li>
+          </ul>
+        </section>
+
+        <section id="data-sharing">
+          <h2>5. Data Sharing & Third Parties</h2>
+          <p><strong>We do not sell, rent, trade, or monetize your personal data.</strong></p>
+          <p>We only share data under the following strictly limited circumstances:</p>
+          <ul>
+            <li><strong>Social Media Platforms (TikTok / ByteDance):</strong> When you choose to publish a video, your video, caption, and tokens are transmitted to TikTok's official API servers to complete the upload request.</li>
+            <li><strong>Infrastructure & Hosting Providers:</strong> Trusted cloud infrastructure providers (e.g., secure hosting, databases) that assist in delivering our services under strict confidentiality agreements.</li>
+            <li><strong>Legal Obligations:</strong> If required by law, subpoena, court order, or governmental regulation to protect the rights, property, and safety of Reel Peel, our users, or the public.</li>
+          </ul>
+        </section>
+
+        <section id="retention-storage">
+          <h2>6. Data Storage, Security & Retention</h2>
+          <p>We employ industry-standard administrative, physical, and technical safeguards to protect your personal information against unauthorized access, loss, misuse, or alteration:</p>
+          <ul>
+            <li>All network communications are encrypted via TLS/HTTPS (SSL).</li>
+            <li>OAuth tokens and credentials are securely encrypted at rest.</li>
+            <li>We retain personal information only for as long as your account remains active or as needed to provide our services. You can delete your data at any time.</li>
+          </ul>
+        </section>
+
+        <section id="user-rights">
+          <h2>7. Your Privacy Rights (GDPR, CCPA & Global)</h2>
+          <p>Depending on your geographic location, you have statutory privacy rights regarding your data:</p>
+          <ul>
+            <li><strong>Right to Access:</strong> Request a copy of the personal information we hold about you.</li>
+            <li><strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete data.</li>
+            <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> Request complete deletion of your account and associated data.</li>
+            <li><strong>Right to Restrict or Object:</strong> Restrict or object to certain processing activities.</li>
+            <li><strong>Right to Withdraw Consent:</strong> Revoke granted permissions or disconnect third-party accounts at any time.</li>
+          </ul>
+        </section>
+
+        <section id="data-deletion">
+          <h2>8. User Data Deletion Instructions</h2>
+          <div class="alert-box alert-info">
+            <div class="alert-icon">🗑️</div>
+            <div class="alert-body">
+              <h4>How to Request Immediate Data Deletion</h4>
+              <p>Reel Peel provides simple, transparent methods for users to remove their information and revoke TikTok platform access.</p>
+            </div>
+          </div>
+          <p>You can delete your data through any of the following methods:</p>
+          <ol>
+            <li><strong>Email Request:</strong> Send an email from your registered email address to <a href="mailto:fahimmagsi@gmail.com">fahimmagsi@gmail.com</a> with the subject line <code>"Data Deletion Request - Reel Peel"</code>. We will verify and permanently delete all your account records, access tokens, and uploaded media within <strong>7 business days</strong>.</li>
+            <li><strong>Revoke TikTok Permissions:</strong> You can immediately disconnect Reel Peel from your TikTok account by navigating to:
+              <br><em>TikTok App &rarr; Profile &rarr; Settings and Privacy &rarr; Security & Permissions &rarr; Apps and Services &rarr; Reel Peel &rarr; Remove / Revoke Access</em>.
+            </li>
+          </ol>
+        </section>
+
+        <section id="children">
+          <h2>9. Children's Privacy</h2>
+          <p>Reel Peel is not directed to children under the age of 13 (or under 16 in the EEA/UK). We do not knowingly collect personal data from children. If you believe that a child has provided us with personal information without parental consent, please contact us immediately at <a href="mailto:fahimmagsi@gmail.com">fahimmagsi@gmail.com</a>, and we will promptly delete such information.</p>
+        </section>
+
+        <section id="changes">
+          <h2>10. Changes to This Privacy Policy</h2>
+          <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technologies, or legal obligations. When changes are made, we will update the "Effective Date" at the top of this document. Continued use of Reel Peel following any modification signifies your acceptance of the updated policy.</p>
+        </section>
+
+        <section id="contact">
+          <h2>11. Contact Information</h2>
+          <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact our privacy representative:</p>
+          <ul>
+            <li><strong>Developer / Operator:</strong> Faheem Hussain</li>
+            <li><strong>Application:</strong> Reel Peel</li>
+            <li><strong>Email:</strong> <a href="mailto:fahimmagsi@gmail.com">fahimmagsi@gmail.com</a></li>
+            <li><strong>Website:</strong> <a href="https://fahimmagsi.github.io/reel-peel/">https://fahimmagsi.github.io/reel-peel/</a></li>
+          </ul>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <span style="font-weight: 700; color: #FFF;">Reel Peel</span>
+        <div class="footer-copy">© 2026 Reel Peel. All rights reserved.</div>
+      </div>
+      <div class="footer-links">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms of Service</a>
+        <a href="mailto:fahimmagsi@gmail.com">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
