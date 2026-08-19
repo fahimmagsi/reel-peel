@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service - Reel Peel</title>
+  <meta name="description" content="Official Terms of Service and End User License Agreement for Reel Peel social media management application.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg-main: #0B0F19;
+  --bg-card: rgba(18, 24, 38, 0.75);
+  --bg-card-hover: rgba(28, 36, 56, 0.85);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-highlight: rgba(99, 102, 241, 0.3);
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --primary-accent: #6366F1;
+  --primary-gradient: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%);
+  --tiktok-cyan: #25F4EE;
+  --tiktok-pink: #FE2C55;
+  --badge-bg: rgba(99, 102, 241, 0.12);
+  --badge-border: rgba(99, 102, 241, 0.3);
+  --badge-text: #818CF8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(37, 244, 238, 0.06) 0%, transparent 50%);
+  min-height: 100vh;
+}
+
+a {
+  color: #818CF8;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #A5B4FC;
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(11, 15, 25, 0.85);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: #FFF !important;
+  font-weight: 600;
+  padding: 0.55rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none !important;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem 1.5rem;
+}
+
+/* Hero Section */
+.hero-header {
+  text-align: center;
+  padding: 3rem 1rem 2rem 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  color: var(--badge-text);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #FFFFFF 0%, #CBD5E1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.meta-info {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Layout with TOC */
+.doc-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .doc-layout {
+    grid-template-columns: 1fr;
+  }
+  .toc-sidebar {
+    display: none;
+  }
+}
+
+.toc-sidebar {
+  position: sticky;
+  top: 6rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(12px);
+}
+
+.toc-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toc-link {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  display: block;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.toc-link:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  text-decoration: none;
+}
+
+/* Content Area */
+.content-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.content-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.content-card h2:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.content-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-card p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-size: 0.975rem;
+}
+
+.content-card ul, .content-card ol {
+  color: var(--text-secondary);
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.975rem;
+}
+
+.content-card li {
+  margin-bottom: 0.4rem;
+}
+
+/* Alert Boxes */
+.alert-box {
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.alert-info {
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  color: #CBD5E1;
+}
+
+.alert-tiktok {
+  background: rgba(37, 244, 238, 0.06);
+  border: 1px solid rgba(37, 244, 238, 0.25);
+  color: #E2E8F0;
+}
+
+.alert-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.alert-body h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #FFF;
+}
+
+.alert-body p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  color: #CBD5E1;
+}
+
+/* Cards Grid for Landing Page */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 1.75rem;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-highlight);
+  background: var(--bg-card-hover);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.15);
+  color: #818CF8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 0.925rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border-color);
+  background: rgba(11, 15, 25, 0.95);
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--text-primary);
+}
+
+.footer-copy {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="./index.html" class="brand-logo">
+      <div class="brand-icon">🎬</div>
+      <span>Reel Peel</span>
+    </a>
+    <div class="nav-links">
+      <a href="./index.html" class="nav-link">Home</a>
+      <a href="./privacy.html" class="nav-link">Privacy Policy</a>
+      <a href="./terms.html" class="nav-link active">Terms of Service</a>
+      <a href="mailto:fahimmagsi@gmail.com" class="btn-primary">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="hero-header">
+      <div class="badge">Terms & Conditions</div>
+      <h1 class="hero-title">Terms of Service</h1>
+      <p class="hero-subtitle">Please read these Terms of Service carefully before accessing or using the Reel Peel software, web platform, or mobile applications.</p>
+      
+      <div class="meta-info">
+        <span>📅 Effective Date: August 20, 2026</span>
+        <span>🕒 Last Updated: August 20, 2026</span>
+        <span>📬 Contact: fahimmagsi@gmail.com</span>
+      </div>
+    </header>
+
+    <div class="doc-layout">
+      <!-- Table of Contents -->
+      <aside class="toc-sidebar">
+        <div class="toc-title">Table of Contents</div>
+        <ul class="toc-list">
+          <li><a href="#acceptance" class="toc-link">1. Acceptance of Terms</a></li>
+          <li><a href="#description" class="toc-link">2. Description of Services</a></li>
+          <li><a href="#eligibility" class="toc-link">3. User Eligibility & Accounts</a></li>
+          <li><a href="#third-party" class="toc-link">4. Third-Party Platforms (TikTok)</a></li>
+          <li><a href="#acceptable-use" class="toc-link">5. Acceptable Use & Content</a></li>
+          <li><a href="#intellectual-prop" class="toc-link">6. Intellectual Property</a></li>
+          <li><a href="#disclaimer" class="toc-link">7. Disclaimers & Warranties</a></li>
+          <li><a href="#liability" class="toc-link">8. Limitation of Liability</a></li>
+          <li><a href="#termination" class="toc-link">9. Termination</a></li>
+          <li><a href="#governing-law" class="toc-link">10. Governing Law</a></li>
+          <li><a href="#contact" class="toc-link">11. Contact & Support</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content-card">
+        
+        <section id="acceptance">
+          <h2>1. Acceptance of Terms</h2>
+          <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("User," "you," or "your") and <strong>Reel Peel</strong> ("we," "our," or "us"). By registering for, downloading, installing, accessing, or using Reel Peel across Web, Desktop, Android, or iOS platforms, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <a href="./privacy.html">Privacy Policy</a>.</p>
+          <p>If you do not agree to these Terms, you must immediately refrain from accessing or using Reel Peel.</p>
+        </section>
+
+        <section id="description">
+          <h2>2. Description of Services</h2>
+          <p>Reel Peel provides a unified social media management suite allowing creators and organizations to manage, schedule, edit, analyze, and publish video content and reels to connected third-party platforms, notably TikTok.</p>
+          <p>We reserve the right to enhance, modify, or temporarily suspend any feature of Reel Peel with or without notice to improve user experience, maintain server performance, or ensure API compliance.</p>
+        </section>
+
+        <section id="eligibility">
+          <h2>3. User Eligibility & Accounts</h2>
+          <ul>
+            <li><strong>Age Requirement:</strong> You must be at least 13 years old (or the legal age of majority in your jurisdiction) to use Reel Peel.</li>
+            <li><strong>Account Security:</strong> You are responsible for safeguarding your login credentials and ensuring that authorized personnel only access your account. You agree to notify us immediately of any unauthorized access.</li>
+            <li><strong>Accuracy:</strong> You agree to provide accurate, current, and complete information during registration and account setup.</li>
+          </ul>
+        </section>
+
+        <section id="third-party">
+          <h2>4. Third-Party Platform Terms & TikTok Integration</h2>
+          <div class="alert-box alert-tiktok">
+            <div class="alert-icon">🎵</div>
+            <div class="alert-body">
+              <h4>Compliance with Third-Party Platform Policies</h4>
+              <p>Reel Peel integrates with third-party application programming interfaces (APIs), including the <strong>TikTok Developer Platform</strong>. When using Reel Peel to interact with TikTok, you agree to comply fully with TikTok's Terms of Service and Community Guidelines.</p>
+            </div>
+          </div>
+          <p>Your use of features connecting to TikTok is governed by:</p>
+          <ul>
+            <li><a href="https://www.tiktok.com/legal/page/global/tik-tok-developer-terms-of-service/en" target="_blank" rel="noopener">TikTok Developer Terms of Service</a></li>
+            <li><a href="https://www.tiktok.com/legal/terms-of-service" target="_blank" rel="noopener">TikTok Terms of Service</a></li>
+            <li><a href="https://www.tiktok.com/community-guidelines" target="_blank" rel="noopener">TikTok Community Guidelines</a></li>
+          </ul>
+          <p>Reel Peel is an independent application and is not endorsed, sponsored, or affiliated with TikTok Inc., ByteDance Ltd., or their affiliates.</p>
+        </section>
+
+        <section id="acceptable-use">
+          <h2>5. Acceptable Use & Prohibited Content</h2>
+          <p>You agree to use Reel Peel solely for lawful purposes. You shall not upload, schedule, or distribute content that:</p>
+          <ul>
+            <li>Infringes upon any third party's copyright, trademark, patent, trade secret, or other proprietary rights.</li>
+            <li>Is defamatory, obscene, pornographic, hateful, violent, harassing, or sexually explicit.</li>
+            <li>Contains malicious code, viruses, trojans, worms, or automated scraping bots.</li>
+            <li>Attempts to circumvent API rate limits, authentication safeguards, or reverse-engineer the Application.</li>
+            <li>Spams, misleads, or deceives social media algorithms or audience members in violation of platform rules.</li>
+          </ul>
+        </section>
+
+        <section id="intellectual-prop">
+          <h2>6. Intellectual Property Rights</h2>
+          <p><strong>Your Content:</strong> You retain 100% full ownership, title, and copyright in all videos, media, graphics, captions, and text you upload or manage via Reel Peel. You grant Reel Peel a limited, non-exclusive license solely to transmit and publish your content to the platforms you specify.</p>
+          <p><strong>Reel Peel Property:</strong> The Reel Peel name, logo, user interface designs, trademarks, source code, and underlying software are the exclusive intellectual property of Faheem Hussain / Reel Peel.</p>
+        </section>
+
+        <section id="disclaimer">
+          <h2>7. Disclaimers & Warranties</h2>
+          <p>REEL PEEL IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR UNINTERRUPTED AVAILABILITY.</p>
+          <p>We do not guarantee that third-party platforms (including TikTok) will accept, display, or promote any video submitted through our application, as publishing is subject to third-party API availability and policies.</p>
+        </section>
+
+        <section id="liability">
+          <h2>8. Limitation of Liability</h2>
+          <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL REEL PEEL, ITS DEVELOPERS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, USE, GOODWILL, OR REPUTATIONAL LOSS RESULTING FROM (A) YOUR USE OF OR INABILITY TO USE THE SERVICE; (B) ANY THIRD-PARTY API DOWNTIME OR POLICY ENFORCEMENT; OR (C) UNAUTHORIZED ACCESS TO YOUR DATA.</p>
+        </section>
+
+        <section id="termination">
+          <h2>9. Termination</h2>
+          <p>We reserve the right to suspend or terminate your access to Reel Peel at our sole discretion, without prior notice, if you violate these Terms, engage in fraudulent behavior, or violate third-party API regulations. You may terminate your account at any time by requesting deletion via our support contact.</p>
+        </section>
+
+        <section id="governing-law">
+          <h2>10. Governing Law & Dispute Resolution</h2>
+          <p>These Terms shall be governed by and construed in accordance with the laws of Pakistan, without regard to conflict of law principles. Any dispute arising under or in connection with these Terms shall be resolved amicably or through the competent courts of jurisdiction.</p>
+        </section>
+
+        <section id="contact">
+          <h2>11. Contact & Support</h2>
+          <p>For inquiries, support, or legal questions concerning these Terms of Service, please contact:</p>
+          <ul>
+            <li><strong>Developer:</strong> Faheem Hussain</li>
+            <li><strong>Email:</strong> <a href="mailto:fahimmagsi@gmail.com">fahimmagsi@gmail.com</a></li>
+            <li><strong>Website:</strong> <a href="https://fahimmagsi.github.io/reel-peel/">https://fahimmagsi.github.io/reel-peel/</a></li>
+          </ul>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <span style="font-weight: 700; color: #FFF;">Reel Peel</span>
+        <div class="footer-copy">© 2026 Reel Peel. All rights reserved.</div>
+      </div>
+      <div class="footer-links">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms of Service</a>
+        <a href="mailto:fahimmagsi@gmail.com">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
